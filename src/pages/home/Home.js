@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 
-// صفحه Home ساده
+// صفحه Home ساده برای تست
 const Home = () => {
   return (
     <div className="p-8">
@@ -15,12 +15,11 @@ const Home = () => {
 function App() {
   return (
     <Router>
-      <div className="direction-rtl">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* صفحات بعدی: About, Contact, Auth */}
+      </Routes>
     </Router>
   );
 }
