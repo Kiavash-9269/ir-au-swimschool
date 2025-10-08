@@ -1,21 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
-
-// صفحه Home ساده
-const Home = () => {
-  return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold mb-4">خوش آمدید به مدرسه شنا ایران استرالیا</h1>
-      <p>این صفحه Home برای تست Navbar و ساختار اولیه است.</p>
-    </div>
-  );
-};
+import Home from "./pages/home/Home";
 
 function App() {
   return (
     <Router>
-      <div className="direction-rtl">
+      <div className="rtl">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
